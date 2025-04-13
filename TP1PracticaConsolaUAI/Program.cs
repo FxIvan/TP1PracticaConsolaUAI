@@ -106,29 +106,49 @@ namespace TP1PracticaConsolaUAI
 
             // Ejercicio 5
             // Dados los datos necesarios de un Rectángulo calcular la superficie.
-            string inputBase, inputAltura;
-            int baseRectangulo, altura, area;
+            /*
+                string inputBase, inputAltura;
+                int baseRectangulo, altura, area;
 
-            Console.WriteLine("Ingrese la base del rectángulo:");
-            inputBase = Console.ReadLine();
+                Console.WriteLine("Ingrese la base del rectángulo:");
+                inputBase = Console.ReadLine();
 
-            Console.WriteLine("Ingrese la altura del rectángulo:");
-            inputAltura = Console.ReadLine();
+                Console.WriteLine("Ingrese la altura del rectángulo:");
+                inputAltura = Console.ReadLine();
 
-            if (!int.TryParse(inputBase, out baseRectangulo) || baseRectangulo <= 0)
+                if (!int.TryParse(inputBase, out baseRectangulo) || baseRectangulo <= 0)
+                {
+                    Console.WriteLine("La base debe ser un número válido y positivo.");
+                    return;
+                }
+
+                if (!int.TryParse(inputAltura, out altura) || altura <= 0)
+                {
+                    Console.WriteLine("La altura debe ser un número válido y positivo.");
+                    return;
+                }
+
+                area = baseRectangulo * altura;
+                Console.WriteLine($"La superficie del rectángulo es: {area}");
+
+                Console.ReadKey();
+            */
+
+            // Ejercicio 6: Calcular el diámetro a partir de la circunferencia
+            string inputCircunferencia;
+            double circunferencia, diametro;
+
+            Console.WriteLine("Ingrese la circunferencia del círculo:");
+            inputCircunferencia = Console.ReadLine();
+
+            if (!double.TryParse(inputCircunferencia, out circunferencia) || circunferencia <= 0)
             {
-                Console.WriteLine("La base debe ser un número válido y positivo.");
+                Console.WriteLine("Por favor, ingrese un valor válido y positivo para la circunferencia.");
                 return;
             }
 
-            if (!int.TryParse(inputAltura, out altura) || altura <= 0)
-            {
-                Console.WriteLine("La altura debe ser un número válido y positivo.");
-                return;
-            }
-
-            area = baseRectangulo * altura;
-            Console.WriteLine($"La superficie del rectángulo es: {area}");
+            diametro = circunferencia / Math.PI;
+            Console.WriteLine($"El diámetro del círculo es: {diametro:F2}"); // F2 para mostrar con 2 decimales
 
             Console.ReadKey();
 
