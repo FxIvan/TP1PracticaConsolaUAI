@@ -135,23 +135,37 @@ namespace TP1PracticaConsolaUAI
             */
 
             // Ejercicio 6: Calcular el diámetro a partir de la circunferencia
-            string inputCircunferencia;
-            double circunferencia, diametro;
+            /*
+                string inputCircunferencia;
+                double circunferencia, diametro;
 
-            Console.WriteLine("Ingrese la circunferencia del círculo:");
-            inputCircunferencia = Console.ReadLine();
+                Console.WriteLine("Ingrese la circunferencia del círculo:");
+                inputCircunferencia = Console.ReadLine();
 
-            if (!double.TryParse(inputCircunferencia, out circunferencia) || circunferencia <= 0)
-            {
-                Console.WriteLine("Por favor, ingrese un valor válido y positivo para la circunferencia.");
-                return;
-            }
+                if (!double.TryParse(inputCircunferencia, out circunferencia) || circunferencia <= 0)
+                {
+                    Console.WriteLine("Por favor, ingrese un valor válido y positivo para la circunferencia.");
+                    return;
+                }
 
-            diametro = circunferencia / Math.PI;
-            Console.WriteLine($"El diámetro del círculo es: {diametro:F2}"); // F2 para mostrar con 2 decimales
+                diametro = circunferencia / Math.PI;
+                Console.WriteLine($"El diámetro del círculo es: {diametro:F2}"); // F2 para mostrar con 2 decimales
 
+                Console.ReadKey();
+            */
+            // Ejercicio 7
+            // Si 1Byte tiene 8 bits, desarrolle una solución programática que permita calcular cuántos bits hay en
+            // cualquier combinación de x KBytes. Explique cómo llegó a esa conclusión.
+            const int BITS_POR_BYTE = 8;
+            const int BYTES_POR_KB = 1024;
+            int kilobytes;
+            int totalBits;
+
+            Console.WriteLine("Ingrese Cantidad de Byte para calcular los bits:");
+            kilobytes = Convert.ToInt32(Console.ReadLine());
+            totalBits = kilobytes * BYTES_POR_KB * BITS_POR_BYTE;
+            Console.WriteLine($"El equivalente en bits son: {totalBits}");
             Console.ReadKey();
-
         }
     }
 }
