@@ -241,10 +241,30 @@ namespace TP1PracticaConsolaUAI
 
             // Ejercicio 12
             // Mostrar la fecha y hora actual.
-            DateTime ahora = DateTime.Now;
+            /*
+                DateTime ahora = DateTime.Now;
 
-            Console.WriteLine("Fecha y hora actual:");
-            Console.WriteLine(ahora);
+                Console.WriteLine("Fecha y hora actual:");
+                Console.WriteLine(ahora);
+                Console.ReadKey();
+            */
+
+            // Ejercicio 13
+            Console.WriteLine("Ingrese una fecha (por ejemplo: 13/04/2025):");
+            string input = Console.ReadLine();
+
+            DateTime fecha;
+
+            if (DateTime.TryParse(input, out fecha))
+            {
+                string formato = fecha.ToString("yyyyMMdd");
+                Console.WriteLine($"La fecha en formato AAAAMMDD es: {formato}");
+            }
+            else
+            {
+                Console.WriteLine("La fecha ingresada no es válida.");
+            }
+
             Console.ReadKey();
         }
     }
