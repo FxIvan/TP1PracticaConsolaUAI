@@ -84,23 +84,54 @@ namespace TP1PracticaConsolaUAI
 
             // Ejercicio 4
             // Dados los datos necesarios de un Cuadrado calcular la superficie.
-            string inputLado;
-            int lado;
-            int area;
+            /*
+                string inputLado;
+                int lado;
+                int area;
 
-            Console.WriteLine("Ingrese la longitud de un lado del cuadrado:");
-            inputLado = Console.ReadLine();
+                Console.WriteLine("Ingrese la longitud de un lado del cuadrado:");
+                inputLado = Console.ReadLine();
 
-            if (!int.TryParse(inputLado, out lado) || lado <= 0)
+                if (!int.TryParse(inputLado, out lado) || lado <= 0)
+                {
+                    Console.WriteLine("Por favor, ingrese un número válido y positivo.");
+                    return;
+                }
+
+                area = lado * lado;
+                Console.WriteLine($"La superficie del cuadrado es: {area}");
+
+                Console.ReadKey();
+            */
+
+            // Ejercicio 5
+            // Dados los datos necesarios de un Rectángulo calcular la superficie.
+            string inputBase, inputAltura;
+            int baseRectangulo, altura, area;
+
+            Console.WriteLine("Ingrese la base del rectángulo:");
+            inputBase = Console.ReadLine();
+
+            Console.WriteLine("Ingrese la altura del rectángulo:");
+            inputAltura = Console.ReadLine();
+
+            if (!int.TryParse(inputBase, out baseRectangulo) || baseRectangulo <= 0)
             {
-                Console.WriteLine("Por favor, ingrese un número válido y positivo.");
+                Console.WriteLine("La base debe ser un número válido y positivo.");
                 return;
             }
 
-            area = lado * lado;
-            Console.WriteLine($"La superficie del cuadrado es: {area}");
+            if (!int.TryParse(inputAltura, out altura) || altura <= 0)
+            {
+                Console.WriteLine("La altura debe ser un número válido y positivo.");
+                return;
+            }
+
+            area = baseRectangulo * altura;
+            Console.WriteLine($"La superficie del rectángulo es: {area}");
 
             Console.ReadKey();
+
         }
     }
 }
