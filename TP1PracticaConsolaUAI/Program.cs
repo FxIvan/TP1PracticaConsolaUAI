@@ -156,16 +156,32 @@ namespace TP1PracticaConsolaUAI
             // Ejercicio 7
             // Si 1Byte tiene 8 bits, desarrolle una solución programática que permita calcular cuántos bits hay en
             // cualquier combinación de x KBytes. Explique cómo llegó a esa conclusión.
-            const int BITS_POR_BYTE = 8;
-            const int BYTES_POR_KB = 1024;
-            int kilobytes;
-            int totalBits;
+            /*
+                const int BITS_POR_BYTE = 8;
+                const int BYTES_POR_KB = 1024;
+                int kilobytes;
+                int totalBits;
 
-            Console.WriteLine("Ingrese Cantidad de Byte para calcular los bits:");
-            kilobytes = Convert.ToInt32(Console.ReadLine());
-            totalBits = kilobytes * BYTES_POR_KB * BITS_POR_BYTE;
-            Console.WriteLine($"El equivalente en bits son: {totalBits}");
+                Console.WriteLine("Ingrese Cantidad de Byte para calcular los bits:");
+                kilobytes = Convert.ToInt32(Console.ReadLine());
+                totalBits = kilobytes * BYTES_POR_KB * BITS_POR_BYTE;
+                Console.WriteLine($"El equivalente en bits son: {totalBits}");
+                Console.ReadKey();
+            */
+
+            // Ejercicio 8
+            // Calcular el factorial de 6.
+            int numero = 6;
+            int factorial = 1;
+
+            for (int i = 1; i <= numero; i++)
+            {
+                factorial *= i;
+            }
+
+            Console.WriteLine($"El factorial de {numero} es: {factorial}");
             Console.ReadKey();
+
         }
     }
 }
