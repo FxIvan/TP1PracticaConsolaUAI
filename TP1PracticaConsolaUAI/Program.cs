@@ -271,25 +271,49 @@ namespace TP1PracticaConsolaUAI
 
             // Ejercicio 14
             // Dadas dos fechas calcular la diferencia en días entre una y la otra.
-            Console.WriteLine("Ingrese la primera fecha (formato: dd/mm/aaaa):");
-            string input1 = Console.ReadLine();
+            /*
+                Console.WriteLine("Ingrese la primera fecha (formato: dd/mm/aaaa):");
+                string input1 = Console.ReadLine();
 
-            Console.WriteLine("Ingrese la segunda fecha (formato: dd/mm/aaaa):");
-            string input2 = Console.ReadLine();
+                Console.WriteLine("Ingrese la segunda fecha (formato: dd/mm/aaaa):");
+                string input2 = Console.ReadLine();
 
-            DateTime fecha1, fecha2;
+                DateTime fecha1, fecha2;
 
-            if (DateTime.TryParse(input1, out fecha1) && DateTime.TryParse(input2, out fecha2))
+                if (DateTime.TryParse(input1, out fecha1) && DateTime.TryParse(input2, out fecha2))
+                {
+                    TimeSpan diferencia = fecha2 - fecha1;
+                    Console.WriteLine($"La diferencia entre las dos fechas es de {Math.Abs(diferencia.Days)} días.");
+                }
+                else
+                {
+                    Console.WriteLine("Una o ambas fechas ingresadas no son válidas.");
+                }
+
+                Console.ReadKey();
+            */
+            // Ejercicio 15
+            // Informar cuantos días faltan para el 25 / 12 / 2020.
+            DateTime fechaObjetivo = new DateTime(2020, 12, 25);
+            DateTime hoy = DateTime.Today;
+
+            TimeSpan diferencia = fechaObjetivo - hoy;
+
+            if (diferencia.TotalDays > 0)
             {
-                TimeSpan diferencia = fecha2 - fecha1;
-                Console.WriteLine($"La diferencia entre las dos fechas es de {Math.Abs(diferencia.Days)} días.");
+                Console.WriteLine($"Faltan {diferencia.Days} días para el 25/12/2020.");
+            }
+            else if (diferencia.TotalDays == 0)
+            {
+                Console.WriteLine("¡Hoy es 25/12/2020!");
             }
             else
             {
-                Console.WriteLine("Una o ambas fechas ingresadas no son válidas.");
+                Console.WriteLine($"El 25/12/2020 ya pasó hace {-diferencia.Days} días.");
             }
 
             Console.ReadKey();
+
         }
     }
 }
