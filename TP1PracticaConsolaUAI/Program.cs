@@ -250,19 +250,43 @@ namespace TP1PracticaConsolaUAI
             */
 
             // Ejercicio 13
-            Console.WriteLine("Ingrese una fecha (por ejemplo: 13/04/2025):");
-            string input = Console.ReadLine();
+            /*
+                Console.WriteLine("Ingrese una fecha (por ejemplo: 13/04/2025):");
+                string input = Console.ReadLine();
 
-            DateTime fecha;
+                DateTime fecha;
 
-            if (DateTime.TryParse(input, out fecha))
+                if (DateTime.TryParse(input, out fecha))
+                {
+                    string formato = fecha.ToString("yyyyMMdd");
+                    Console.WriteLine($"La fecha en formato AAAAMMDD es: {formato}");
+                }
+                else
+                {
+                    Console.WriteLine("La fecha ingresada no es válida.");
+                }
+
+                Console.ReadKey();
+            */
+
+            // Ejercicio 14
+            // Dadas dos fechas calcular la diferencia en días entre una y la otra.
+            Console.WriteLine("Ingrese la primera fecha (formato: dd/mm/aaaa):");
+            string input1 = Console.ReadLine();
+
+            Console.WriteLine("Ingrese la segunda fecha (formato: dd/mm/aaaa):");
+            string input2 = Console.ReadLine();
+
+            DateTime fecha1, fecha2;
+
+            if (DateTime.TryParse(input1, out fecha1) && DateTime.TryParse(input2, out fecha2))
             {
-                string formato = fecha.ToString("yyyyMMdd");
-                Console.WriteLine($"La fecha en formato AAAAMMDD es: {formato}");
+                TimeSpan diferencia = fecha2 - fecha1;
+                Console.WriteLine($"La diferencia entre las dos fechas es de {Math.Abs(diferencia.Days)} días.");
             }
             else
             {
-                Console.WriteLine("La fecha ingresada no es válida.");
+                Console.WriteLine("Una o ambas fechas ingresadas no son válidas.");
             }
 
             Console.ReadKey();
