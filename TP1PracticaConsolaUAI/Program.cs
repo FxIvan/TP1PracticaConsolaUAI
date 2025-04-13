@@ -203,22 +203,37 @@ namespace TP1PracticaConsolaUAI
                 Console.ReadKey();
             */
             // Ejercicio 10: Reorganizar frase con substring
-            string x;
-            string primeraMitad, segundaMitad, resultado;
+            /*
+                string x;
+                string primeraMitad, segundaMitad, resultado;
+
+                Console.WriteLine("Ingrese una frase:");
+                x = Console.ReadLine();
+
+                int longitud = x.Length;
+                int mitad = longitud / 2;
+
+                // Si la longitud es impar, la segunda mitad incluirá un carácter más
+                segundaMitad = x.Substring(mitad);
+                primeraMitad = x.Substring(0, mitad);
+
+                resultado = segundaMitad + primeraMitad;
+
+                Console.WriteLine($"Frase reorganizada: {resultado}");
+
+                Console.ReadKey();
+            */
+
+            // Ejercicio 11: Dada una frase informar la cantidad de caracteres que tiene.
+            string frase;
+            int cantidadCaracteres;
 
             Console.WriteLine("Ingrese una frase:");
-            x = Console.ReadLine();
+            frase = Console.ReadLine();
 
-            int longitud = x.Length;
-            int mitad = longitud / 2;
+            cantidadCaracteres = frase.Length;
 
-            // Si la longitud es impar, la segunda mitad incluirá un carácter más
-            segundaMitad = x.Substring(mitad);
-            primeraMitad = x.Substring(0, mitad);
-
-            resultado = segundaMitad + primeraMitad;
-
-            Console.WriteLine($"Frase reorganizada: {resultado}");
+            Console.WriteLine($"La frase tiene {cantidadCaracteres} caracteres.");
 
             Console.ReadKey();
 
