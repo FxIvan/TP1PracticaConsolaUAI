@@ -225,18 +225,27 @@ namespace TP1PracticaConsolaUAI
             */
 
             // Ejercicio 11: Dada una frase informar la cantidad de caracteres que tiene.
-            string frase;
-            int cantidadCaracteres;
+            /*
+                string frase;
+                int cantidadCaracteres;
 
-            Console.WriteLine("Ingrese una frase:");
-            frase = Console.ReadLine();
+                Console.WriteLine("Ingrese una frase:");
+                frase = Console.ReadLine();
 
-            cantidadCaracteres = frase.Length;
+                cantidadCaracteres = frase.Length;
 
-            Console.WriteLine($"La frase tiene {cantidadCaracteres} caracteres.");
+                Console.WriteLine($"La frase tiene {cantidadCaracteres} caracteres.");
 
+                Console.ReadKey();
+            */
+
+            // Ejercicio 12
+            // Mostrar la fecha y hora actual.
+            DateTime ahora = DateTime.Now;
+
+            Console.WriteLine("Fecha y hora actual:");
+            Console.WriteLine(ahora);
             Console.ReadKey();
-
         }
     }
 }
