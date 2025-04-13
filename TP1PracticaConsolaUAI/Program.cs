@@ -10,17 +10,52 @@ namespace TP1PracticaConsolaUAI
     {
         static void Main(string[] args)
         {
-            string NumeroString;
-            string Numero2String;
-            Console.WriteLine("Ingrese un número por favor: ");
-            NumeroString = Console.ReadLine();
-            Console.WriteLine("Ingrese otro número por favor: ");
-            Numero2String = Console.ReadLine();
-            int cvrtNumero = Convert.ToInt32(NumeroString);
-            int cvrtNumero2 = Convert.ToInt32(Numero2String);
-            Console.WriteLine("La suma es {0} ", cvrtNumero + cvrtNumero2);
-            Console.ReadKey();
+            // Ejercicio 1
+            /*
+                string NumeroString;
+                string Numero2String;
+                Console.WriteLine("Ingrese un número por favor: ");
+                NumeroString = Console.ReadLine();
+                Console.WriteLine("Ingrese otro número por favor: ");
+                Numero2String = Console.ReadLine();
+                int cvrtNumero = Convert.ToInt32(NumeroString);
+                int cvrtNumero2 = Convert.ToInt32(Numero2String);
+                Console.WriteLine("La suma es {0} ", cvrtNumero + cvrtNumero2);
+                Console.ReadKey();
+            */
 
+            // Ejercicio 2
+            // El detalle es que le agregue una validacion de Parse
+            // Documentacion: https://learn.microsoft.com/es-es/dotnet/api/system.enum.tryparse?view=net-9.0
+            // Ejemplo: https://learn.microsoft.com/es-es/dotnet/api/system.enum.tryparse?view=net-9.0#:~:text=Ejemplos-,En%20el%20ejemplo%20siguiente%20se%20define%20una%20enumeraci%C3%B3n%20Colors%2C%20se%20llama,determinados%20valores%20enteros%20son%20valores%20subyacentes%20en%20la%20enumeraci%C3%B3n%20Colors.,-C%23
+            int Numero = 0;
+            int Numero2 = 0;
+            string strNumero;
+            string strNumero2;
+            int i = 0;
+            int Inicio = 0;
+            int fin = 0;
+
+            Console.WriteLine("Ingrese un numero por favor: ");
+            strNumero = Console.ReadLine();
+            if (!Int32.TryParse(strNumero, out Numero))
+            {
+                Console.WriteLine("No es un numero valido");
+                Console.ReadKey();
+                return;
+            }
+
+            Console.WriteLine("Ingrese otro numero por favor: ");
+            strNumero2 = Console.ReadLine();
+            if (!Int32.TryParse(strNumero2, out Numero2))
+            {
+                Console.WriteLine("No es un numero valido");
+                Console.ReadKey();
+                return;
+            }
+
+            Console.WriteLine(Numero2 - Numero);
+            Console.ReadKey();
         }
     }
 }
