@@ -59,27 +59,48 @@ namespace TP1PracticaConsolaUAI
             // Ejercicio 3
             // Dados los lados de un triangulo calcular el perímetro.
             // Formula: P = a + b + c
-            string a;
-            string b;
-            string c;
-            int resultado;
+            /*
+                string a;
+                string b;
+                string c;
+                int resultado;
 
-            Console.WriteLine("Ingrese Longitud A:");
-            a = Console.ReadLine();
-            Console.WriteLine("Ingrese Longitud B:");
-            b = Console.ReadLine();
-            Console.WriteLine("Ingrese Longitud C");
-            c = Console.ReadLine();
+                Console.WriteLine("Ingrese Longitud A:");
+                a = Console.ReadLine();
+                Console.WriteLine("Ingrese Longitud B:");
+                b = Console.ReadLine();
+                Console.WriteLine("Ingrese Longitud C");
+                c = Console.ReadLine();
 
-            int cvrtA = Convert.ToInt32(a);
-            int cvrtB = Convert.ToInt32(b);
-            int cvrtC = Convert.ToInt32(c);
+                int cvrtA = Convert.ToInt32(a);
+                int cvrtB = Convert.ToInt32(b);
+                int cvrtC = Convert.ToInt32(c);
 
-            resultado = cvrtA + cvrtB + cvrtC;
+                resultado = cvrtA + cvrtB + cvrtC;
 
-            Console.WriteLine($"El perímetro es: {resultado}"); ;
+                Console.WriteLine($"El perímetro es: {resultado}"); ;
+                Console.ReadKey();
+            */
+
+            // Ejercicio 4
+            // Dados los datos necesarios de un Cuadrado calcular la superficie.
+            string inputLado;
+            int lado;
+            int area;
+
+            Console.WriteLine("Ingrese la longitud de un lado del cuadrado:");
+            inputLado = Console.ReadLine();
+
+            if (!int.TryParse(inputLado, out lado) || lado <= 0)
+            {
+                Console.WriteLine("Por favor, ingrese un número válido y positivo.");
+                return;
+            }
+
+            area = lado * lado;
+            Console.WriteLine($"La superficie del cuadrado es: {area}");
+
             Console.ReadKey();
-
         }
     }
 }
