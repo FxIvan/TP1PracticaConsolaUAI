@@ -171,15 +171,55 @@ namespace TP1PracticaConsolaUAI
 
             // Ejercicio 8
             // Calcular el factorial de 6.
-            int numero = 6;
-            int factorial = 1;
+            /*
+                int numero = 6;
+                int factorial = 1;
 
-            for (int i = 1; i <= numero; i++)
-            {
-                factorial *= i;
-            }
+                for (int i = 1; i <= numero; i++)
+                {
+                    factorial *= i;
+                }
 
-            Console.WriteLine($"El factorial de {numero} es: {factorial}");
+                Console.WriteLine($"El factorial de {numero} es: {factorial}");
+                Console.ReadKey();
+            */
+
+            // Ejercicio 9
+            // Dadas dos frases concatenarlas y mostrar el resultado. 
+            /*
+                string frase1, frase2, resultado;
+
+                Console.WriteLine("Ingrese la primera frase:");
+                frase1 = Console.ReadLine();
+
+                Console.WriteLine("Ingrese la segunda frase:");
+                frase2 = Console.ReadLine();
+
+                // Concatenación
+                resultado = frase1 + " " + frase2;
+
+                Console.WriteLine($"La frase resultante es: {resultado}");
+
+                Console.ReadKey();
+            */
+            // Ejercicio 10: Reorganizar frase con substring
+            string x;
+            string primeraMitad, segundaMitad, resultado;
+
+            Console.WriteLine("Ingrese una frase:");
+            x = Console.ReadLine();
+
+            int longitud = x.Length;
+            int mitad = longitud / 2;
+
+            // Si la longitud es impar, la segunda mitad incluirá un carácter más
+            segundaMitad = x.Substring(mitad);
+            primeraMitad = x.Substring(0, mitad);
+
+            resultado = segundaMitad + primeraMitad;
+
+            Console.WriteLine($"Frase reorganizada: {resultado}");
+
             Console.ReadKey();
 
         }
