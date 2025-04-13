@@ -32,9 +32,6 @@ namespace TP1PracticaConsolaUAI
             int Numero2 = 0;
             string strNumero;
             string strNumero2;
-            int i = 0;
-            int Inicio = 0;
-            int fin = 0;
 
             Console.WriteLine("Ingrese un numero por favor: ");
             strNumero = Console.ReadLine();
